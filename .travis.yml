@@ -1,20 +1,20 @@
 language: python  # this works for Linux but is an error on macOS or Windows
 
 jobs:
-  include:
-    - name: "Python 3.8 on xenial"
+  include:  # https://docs.travis-ci.com/user/reference/overview/ SO lists https://en.wikipedia.org/wiki/Ubuntu_version_history
+    - name: "Python 3.8 on 16.04 Xenial Xerus"
       dist: xenial
       python: 3.8           # this works for Linux but is ignored on macOS or Windows}
 
-    - name: "Python 3.8 on Disco Dingo"
-      dist: disco
+    - name: "Python 3.8 on 14.04 Trusty Tahr"
+      dist: trusty
       python: 3.8
 
-    - name: "Python 3.8 on Zesty Zapus"
-      dist: zesty
+    - name: "Python 3.8 on 12.04 Precise Pangolin"
+      dist: precise
       python: 3.8
 
-    - name: "Python 3.8 on Bionic Beaver"
+    - name: "Python 3.8 on 18.04 Bionic Beaver"
       dist: bionic
       python: 3.8
 
