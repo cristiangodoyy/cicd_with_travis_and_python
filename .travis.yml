@@ -25,8 +25,6 @@ jobs:
     - name: "Python 3.8 on 18.04 Bionic Beaver"
       dist: bionic
       python: 3.8
-      script:
-         - exit 1
 
     - stage: "Tests in other Platforms"
       name: "Python 3.7.4 on macOS"
@@ -40,6 +38,7 @@ jobs:
         - choco install python --version 3.8.0
         - python -m pip install --upgrade pip
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
+
     - stage: deploy
       if: (branch = develop) AND (NOT (type IN (push, pull_request)))
       os: linux
