@@ -10,10 +10,10 @@ jobs:
 #      dist: trusty
 #      python: 3.7
 #
-#    - name: "Python 3.8 on 12.04 Precise Pangolin"
-#      dist: precise
-#      python: 3.8
-#
+    - name: "Python 3.8 on 12.04 Precise Pangolin"
+      dist: precise
+      python: 3.8
+
 #    - name: "Python 3.8 on 18.04 Bionic Beaver"
 #      dist: bionic
 #      python: 3.8
