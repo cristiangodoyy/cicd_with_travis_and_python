@@ -15,7 +15,7 @@ jobs:
       python: 3.8
 
     - name: "Python 3.8 on Bionic Beaver"
-      dist: pepe
+      dist: bionic
       python: 3.8
 
 install:
