@@ -1,4 +1,11 @@
+git:
+  submodules: false
+  quiet: true
+  depth: 3
+
 language: python  # this works for Linux but is an error on macOS or Windows
+
+cache: pip
 
 jobs:
   include:  # https://docs.travis-ci.com/user/reference/overview/ SO lists https://en.wikipedia.org/wiki/Ubuntu_version_history
