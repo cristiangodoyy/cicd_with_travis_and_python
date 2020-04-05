@@ -5,18 +5,18 @@ git:
 
 language: python  # this works for Linux but is an error on macOS or Windows
 
-cache: pip
+cache: pip  # caching
 
 jobs:
   include:  # https://docs.travis-ci.com/user/reference/overview/ SO lists https://en.wikipedia.org/wiki/Ubuntu_version_history
     - name: "Python 3.6 on 16.04 Xenial Xerus"
       dist: xenial
-      python: 3.6           # this works for Linux but is ignored on macOS or Windows}
+      python: 3.6  # this works for Linux but is ignored on macOS or Windows
 
     - name: "Python 3.5 on 14.04 Trusty Tahr"
       dist: trusty
       python: 3.5
-#
+
     - name: "Python 2.7 on 12.04 Precise Pangolin"
       dist: precise
       python: 2.7
