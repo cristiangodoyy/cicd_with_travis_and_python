@@ -3,7 +3,7 @@ git:
   quiet: true
   depth: 3
 
-language: python  # this works for Linux but is an error on macOS or Windows
+language: python  # this works for Linux but is an error on macOS or Windows. We will specify that the language is Python.
 
 cache: pip  # caching
 
@@ -48,13 +48,13 @@ jobs:
       script:
         - echo "Deploying (for now)"
 
-install:
-  - pip3 install --upgrade pip  # all three OSes agree about 'pip3'
-  - pip3 install -r requirements.txt
+install:  # antes de ejecutar los test debemos crear el entorno virtual. command to run inside the virtual environment
+  - pip3 install --upgrade pip  # all three OSes agree about 'pip3'. Command to install dependencies.
+  - pip3 install -r requirements.txt  # Travis already creates a virtual environment and activates it. You don't need to do that.
 
 # command to run tests
 # 'python' points to Python 2.7 on macOS but points to Python 3.8 on Linux and Windows
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
 script:
-  # unit test
+  # unit test. command run to test.
   - python3 -m pytest -v || python -m pytest -v
