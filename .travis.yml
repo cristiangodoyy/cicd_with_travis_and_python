@@ -1,11 +1,11 @@
 git:
   submodules: false
   quiet: true
-  depth: 3
+  depth: 3  # we will validate how to adapt the cloning depth in Git for quick checkout.
 
 language: python  # this works for Linux but is an error on macOS or Windows. We will specify that the language is Python.
 
-cache: pip  # caching
+cache: pip  # we will cache the virtual environment creation for pip packages using caching
 
 jobs:
   include:  # https://docs.travis-ci.com/user/reference/overview/ SO lists https://en.wikipedia.org/wiki/Ubuntu_version_history
